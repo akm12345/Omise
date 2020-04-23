@@ -14,6 +14,14 @@
 		04A15AE62450758300EB54C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A15AE42450758300EB54C6 /* LaunchScreen.storyboard */; };
 		04A15AF12450758400EB54C6 /* OmiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15AF02450758400EB54C6 /* OmiseTests.swift */; };
 		04A15AFC2450758400EB54C6 /* OmiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15AFB2450758400EB54C6 /* OmiseUITests.swift */; };
+		04A15B1424518EB800EB54C6 /* OMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1324518EB800EB54C6 /* OMBaseViewController.swift */; };
+		04A15B1624518F0E00EB54C6 /* OMLocalMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1524518F0E00EB54C6 /* OMLocalMessages.swift */; };
+		04A15B182451924500EB54C6 /* OMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B172451924500EB54C6 /* OMConstants.swift */; };
+		04A15B1A2451925600EB54C6 /* OMErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B192451925600EB54C6 /* OMErrors.swift */; };
+		04A15B1C2451935200EB54C6 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1B2451935200EB54C6 /* Webservice.swift */; };
+		04A15B1E2451936600EB54C6 /* WebServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1D2451936600EB54C6 /* WebServiceConstants.swift */; };
+		04A15B202451937900EB54C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1F2451937900EB54C6 /* API.swift */; };
+		04A15B222451944F00EB54C6 /* OMParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B212451944F00EB54C6 /* OMParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		04A15AF72450758400EB54C6 /* OmiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A15AFB2450758400EB54C6 /* OmiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmiseUITests.swift; sourceTree = "<group>"; };
 		04A15AFD2450758400EB54C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A15B1324518EB800EB54C6 /* OMBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMBaseViewController.swift; sourceTree = "<group>"; };
+		04A15B1524518F0E00EB54C6 /* OMLocalMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMLocalMessages.swift; sourceTree = "<group>"; };
+		04A15B172451924500EB54C6 /* OMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMConstants.swift; sourceTree = "<group>"; };
+		04A15B192451925600EB54C6 /* OMErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMErrors.swift; sourceTree = "<group>"; };
+		04A15B1B2451935200EB54C6 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		04A15B1D2451936600EB54C6 /* WebServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConstants.swift; sourceTree = "<group>"; };
+		04A15B1F2451937900EB54C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		04A15B212451944F00EB54C6 /* OMParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +181,7 @@
 		04A15B0D24507F5100EB54C6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B1324518EB800EB54C6 /* OMBaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -186,6 +203,9 @@
 		04A15B1024507F6E00EB54C6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B1B2451935200EB54C6 /* Webservice.swift */,
+				04A15B1D2451936600EB54C6 /* WebServiceConstants.swift */,
+				04A15B1F2451937900EB54C6 /* API.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,6 +213,10 @@
 		04A15B1124507F7500EB54C6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B1524518F0E00EB54C6 /* OMLocalMessages.swift */,
+				04A15B172451924500EB54C6 /* OMConstants.swift */,
+				04A15B192451925600EB54C6 /* OMErrors.swift */,
+				04A15B212451944F00EB54C6 /* OMParser.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -336,8 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A15B1E2451936600EB54C6 /* WebServiceConstants.swift in Sources */,
+				04A15B182451924500EB54C6 /* OMConstants.swift in Sources */,
+				04A15B1C2451935200EB54C6 /* Webservice.swift in Sources */,
 				04A15ADA2450758100EB54C6 /* AppDelegate.swift in Sources */,
 				04A15ADC2450758100EB54C6 /* SceneDelegate.swift in Sources */,
+				04A15B1424518EB800EB54C6 /* OMBaseViewController.swift in Sources */,
+				04A15B1A2451925600EB54C6 /* OMErrors.swift in Sources */,
+				04A15B202451937900EB54C6 /* API.swift in Sources */,
+				04A15B222451944F00EB54C6 /* OMParser.swift in Sources */,
+				04A15B1624518F0E00EB54C6 /* OMLocalMessages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
