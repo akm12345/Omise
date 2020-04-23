@@ -1,24 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VIm-p1-yEd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Charites-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OMCharityListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="OMCharityListViewController" customModule="Omise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kW8-lG-a7j">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CharityTableViewCell" rowHeight="120" id="k7c-7X-fq5" customClass="CharityTableViewCell" customModule="Omise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k7c-7X-fq5" id="Hgl-nh-4sW">
+                                            <rect key="frame" x="0.0" y="0.0" width="382.5" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlE-p4-MLZ">
+                                                    <rect key="frame" x="10" y="10" width="120" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Iez-C4-ScQ"/>
+                                                        <constraint firstAttribute="width" constant="120" id="aH2-Yd-wIT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gHX-h1-ch9">
+                                                    <rect key="frame" x="140" y="47.5" width="232.5" height="25.5"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gHX-h1-ch9" firstAttribute="leading" secondItem="NlE-p4-MLZ" secondAttribute="trailing" constant="10" id="3u6-ib-jWF"/>
+                                                <constraint firstAttribute="trailing" secondItem="gHX-h1-ch9" secondAttribute="trailing" constant="10" id="7uS-4U-8GH"/>
+                                                <constraint firstItem="NlE-p4-MLZ" firstAttribute="leading" secondItem="Hgl-nh-4sW" secondAttribute="leading" constant="10" id="N49-Fm-iFW"/>
+                                                <constraint firstItem="NlE-p4-MLZ" firstAttribute="top" secondItem="Hgl-nh-4sW" secondAttribute="top" constant="10" id="NYR-Dt-1Du"/>
+                                                <constraint firstAttribute="bottom" secondItem="NlE-p4-MLZ" secondAttribute="bottom" constant="10" id="uhJ-gP-VZA"/>
+                                                <constraint firstItem="NlE-p4-MLZ" firstAttribute="centerY" secondItem="gHX-h1-ch9" secondAttribute="centerY" id="z6L-7h-EpO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="charityNameLabel" destination="gHX-h1-ch9" id="ybJ-OH-nwb"/>
+                                            <outlet property="logoImageView" destination="NlE-p4-MLZ" id="6um-ag-p6z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="SG2-u4-i0k"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qyh-aR-GfR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kW8-lG-a7j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bTL-Sg-xPB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kW8-lG-a7j" secondAttribute="trailing" id="fkE-d0-yId"/>
+                            <constraint firstItem="kW8-lG-a7j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pe9-Lj-CFw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kW8-lG-a7j" secondAttribute="bottom" id="ua6-Yb-rlp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Charites" id="igC-gR-1ib"/>
+                    <connections>
+                        <outlet property="charityListTableView" destination="kW8-lG-a7j" id="hk7-fQ-35S"/>
+                        <segue destination="edg-rz-tO3" kind="show" identifier="OMCharityDonationViewController" id="YXI-Fq-efy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="75.669642857142847"/>
+        </scene>
+        <!--Donate-->
+        <scene sceneID="igE-9I-bEq">
+            <objects>
+                <viewController storyboardIdentifier="OMCharityDonationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="edg-rz-tO3" customClass="OMCharityDonationViewController" customModule="Omise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GP3-mk-QQl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMu-rx-VgG">
+                                <rect key="frame" x="35" y="113" width="344" height="52.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNN-bg-Azw" customClass="RoundButton" customModule="Omise" customModuleProvider="target">
+                                <rect key="frame" x="35" y="332" width="344" height="55"/>
+                                <color key="backgroundColor" red="0.40350425239999999" green="0.75053113699999996" blue="0.72172248360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="n2g-wc-qD8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <state key="normal" title="Donate Amount">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="donateAmount:" destination="edg-rz-tO3" eventType="touchUpInside" id="YIX-O1-zCg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UM1-bE-7yY">
+                                <rect key="frame" x="35" y="190.5" width="344" height="21.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Charity Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB9-Fe-21k">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="21.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="Lck-Pv-bdv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="QJA-VL-HUK">
+                                        <rect key="frame" x="129" y="0.0" width="215" height="21.5"/>
+                                        <accessibility key="accessibilityConfiguration" label="Label-DonationVC"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="upD-ss-Jrf">
+                                <rect key="frame" x="35" y="237" width="344" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="฿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85w-Cy-ME0">
+                                        <rect key="frame" x="0.0" y="0.0" width="29.5" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Gk-gr-diR" customClass="BindingTextField" customModule="Omise" customModuleProvider="target">
+                                        <rect key="frame" x="44.5" y="0.0" width="299.5" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xNN-bg-Azw" firstAttribute="leading" secondItem="pMu-rx-VgG" secondAttribute="leading" id="2Lf-Kd-bhg"/>
+                            <constraint firstItem="UM1-bE-7yY" firstAttribute="top" secondItem="pMu-rx-VgG" secondAttribute="bottom" constant="25" id="Dbh-2o-cx2"/>
+                            <constraint firstItem="xNN-bg-Azw" firstAttribute="trailing" secondItem="pMu-rx-VgG" secondAttribute="trailing" id="Igp-1d-8D8"/>
+                            <constraint firstItem="upD-ss-Jrf" firstAttribute="leading" secondItem="pMu-rx-VgG" secondAttribute="leading" id="Pyz-AR-Dw4"/>
+                            <constraint firstItem="upD-ss-Jrf" firstAttribute="top" secondItem="UM1-bE-7yY" secondAttribute="bottom" constant="25" id="bpK-Hf-bcD"/>
+                            <constraint firstItem="pMu-rx-VgG" firstAttribute="leading" secondItem="Fum-8R-zrm" secondAttribute="leading" constant="35" id="fi3-cT-pJA"/>
+                            <constraint firstItem="pMu-rx-VgG" firstAttribute="top" secondItem="Fum-8R-zrm" secondAttribute="top" constant="25" id="p7E-FI-KVf"/>
+                            <constraint firstItem="Fum-8R-zrm" firstAttribute="trailing" secondItem="pMu-rx-VgG" secondAttribute="trailing" constant="35" id="rBO-pa-901"/>
+                            <constraint firstItem="UM1-bE-7yY" firstAttribute="leading" secondItem="pMu-rx-VgG" secondAttribute="leading" id="vEf-1V-7WG"/>
+                            <constraint firstItem="UM1-bE-7yY" firstAttribute="trailing" secondItem="pMu-rx-VgG" secondAttribute="trailing" id="wCT-f6-j1m"/>
+                            <constraint firstItem="upD-ss-Jrf" firstAttribute="trailing" secondItem="pMu-rx-VgG" secondAttribute="trailing" id="xnx-Pb-SdP"/>
+                            <constraint firstItem="xNN-bg-Azw" firstAttribute="top" secondItem="upD-ss-Jrf" secondAttribute="bottom" constant="35" id="y7k-88-B9V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fum-8R-zrm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donate" id="jKm-bp-aMy"/>
+                    <connections>
+                        <outlet property="charityNameLabel" destination="QJA-VL-HUK" id="KTQ-Tb-LrK"/>
+                        <outlet property="donationAmountTextField" destination="2Gk-gr-diR" id="G7f-Hp-pnl"/>
+                        <segue destination="C2Z-vT-Ff9" kind="presentation" identifier="OMTransactionSuccessViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cvb-l4-6rq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mek-WP-9Y6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610.144927536232" y="71.651785714285708"/>
+        </scene>
+        <!--Transaction Success View Controller-->
+        <scene sceneID="Ig0-qT-TBG">
+            <objects>
+                <viewController storyboardIdentifier="OMTransactionSuccessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C2Z-vT-Ff9" customClass="OMTransactionSuccessViewController" customModule="Omise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydl-Uv-99m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C8t-Cc-EiQ">
+                                <rect key="frame" x="46.5" y="333" width="321.5" height="230.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-hc-xLa">
+                                        <rect key="frame" x="70.5" y="0.0" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="0K2-gQ-rAJ"/>
+                                            <constraint firstAttribute="width" constant="180" id="hVI-Cz-HB7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donation Successfull !!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDl-E3-qnZ">
+                                        <rect key="frame" x="0.0" y="200" width="321.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH2-fZ-qqE" customClass="RoundButton" customModule="Omise" customModuleProvider="target">
+                                <rect key="frame" x="30" y="754" width="354" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40213584899902344" green="0.73042494058609009" blue="0.74254363775253296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="0o3-AJ-8rZ" kind="unwind" unwindAction="unwindToCharityListVC:" id="sbM-Du-WzF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="C8t-Cc-EiQ" firstAttribute="centerX" secondItem="ydl-Uv-99m" secondAttribute="centerX" id="03x-yc-n57"/>
+                            <constraint firstItem="C8t-Cc-EiQ" firstAttribute="centerY" secondItem="ydl-Uv-99m" secondAttribute="centerY" id="MdV-r8-eFC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gqe-W0-rxb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Ll-RF-Qvx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4OB-41-7YE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0o3-AJ-8rZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2333.3333333333335" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="On9-oi-5Ly">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VIm-p1-yEd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jof-rP-acc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5yb-m2-S0t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAC-Rd-jqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="76.339285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="success" width="512" height="512"/>
+    </resources>
 </document>
+

@@ -22,6 +22,16 @@
 		04A15B1E2451936600EB54C6 /* WebServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1D2451936600EB54C6 /* WebServiceConstants.swift */; };
 		04A15B202451937900EB54C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1F2451937900EB54C6 /* API.swift */; };
 		04A15B222451944F00EB54C6 /* OMParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B212451944F00EB54C6 /* OMParser.swift */; };
+		04A15B262451CB9E00EB54C6 /* OMTransactionSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B232451CB9D00EB54C6 /* OMTransactionSuccessViewController.swift */; };
+		04A15B272451CB9E00EB54C6 /* OMCharityDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B242451CB9E00EB54C6 /* OMCharityDonationViewController.swift */; };
+		04A15B282451CB9E00EB54C6 /* OMCharityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B252451CB9E00EB54C6 /* OMCharityListViewController.swift */; };
+		04A15B2C2451CEB700EB54C6 /* CharityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B2B2451CEB700EB54C6 /* CharityTableViewCell.swift */; };
+		04A15B2E2451E40B00EB54C6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B2D2451E40B00EB54C6 /* Observable.swift */; };
+		04A15B302451E44500EB54C6 /* CharityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B2F2451E44500EB54C6 /* CharityListViewModel.swift */; };
+		04A15B322451E48C00EB54C6 /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B312451E48C00EB54C6 /* RowViewModel.swift */; };
+		04A15B342451E4C000EB54C6 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B332451E4C000EB54C6 /* BindingTextField.swift */; };
+		04A15B392451E58F00EB54C6 /* CharityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B382451E58F00EB54C6 /* CharityListController.swift */; };
+		04A15B3B2451E5C100EB54C6 /* Charity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B3A2451E5C100EB54C6 /* Charity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,16 @@
 		04A15B1D2451936600EB54C6 /* WebServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConstants.swift; sourceTree = "<group>"; };
 		04A15B1F2451937900EB54C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		04A15B212451944F00EB54C6 /* OMParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMParser.swift; sourceTree = "<group>"; };
+		04A15B232451CB9D00EB54C6 /* OMTransactionSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMTransactionSuccessViewController.swift; sourceTree = "<group>"; };
+		04A15B242451CB9E00EB54C6 /* OMCharityDonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMCharityDonationViewController.swift; sourceTree = "<group>"; };
+		04A15B252451CB9E00EB54C6 /* OMCharityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMCharityListViewController.swift; sourceTree = "<group>"; };
+		04A15B2B2451CEB700EB54C6 /* CharityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharityTableViewCell.swift; sourceTree = "<group>"; };
+		04A15B2D2451E40B00EB54C6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		04A15B2F2451E44500EB54C6 /* CharityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListViewModel.swift; sourceTree = "<group>"; };
+		04A15B312451E48C00EB54C6 /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
+		04A15B332451E4C000EB54C6 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		04A15B382451E58F00EB54C6 /* CharityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListController.swift; sourceTree = "<group>"; };
+		04A15B3A2451E5C100EB54C6 /* Charity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Charity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +180,7 @@
 		04A15B0A24507F3900EB54C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B3A2451E5C100EB54C6 /* Charity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +188,8 @@
 		04A15B0B24507F4100EB54C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B2A2451CEA300EB54C6 /* CustomViews */,
+				04A15B292451CE8E00EB54C6 /* TableCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +197,7 @@
 		04A15B0C24507F4700EB54C6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B372451E56100EB54C6 /* Charities */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -182,6 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				04A15B1324518EB800EB54C6 /* OMBaseViewController.swift */,
+				04A15B252451CB9E00EB54C6 /* OMCharityListViewController.swift */,
+				04A15B242451CB9E00EB54C6 /* OMCharityDonationViewController.swift */,
+				04A15B232451CB9D00EB54C6 /* OMTransactionSuccessViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +216,7 @@
 		04A15B0E24507F5C00EB54C6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B312451E48C00EB54C6 /* RowViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -217,6 +245,8 @@
 				04A15B172451924500EB54C6 /* OMConstants.swift */,
 				04A15B192451925600EB54C6 /* OMErrors.swift */,
 				04A15B212451944F00EB54C6 /* OMParser.swift */,
+				04A15B2D2451E40B00EB54C6 /* Observable.swift */,
+				04A15B332451E4C000EB54C6 /* BindingTextField.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -227,6 +257,30 @@
 				04A15ADF2450758100EB54C6 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04A15B292451CE8E00EB54C6 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				04A15B2B2451CEB700EB54C6 /* CharityTableViewCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		04A15B2A2451CEA300EB54C6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		04A15B372451E56100EB54C6 /* Charities */ = {
+			isa = PBXGroup;
+			children = (
+				04A15B2F2451E44500EB54C6 /* CharityListViewModel.swift */,
+				04A15B382451E58F00EB54C6 /* CharityListController.swift */,
+			);
+			path = Charities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,11 +415,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A15B1E2451936600EB54C6 /* WebServiceConstants.swift in Sources */,
+				04A15B342451E4C000EB54C6 /* BindingTextField.swift in Sources */,
+				04A15B302451E44500EB54C6 /* CharityListViewModel.swift in Sources */,
+				04A15B2E2451E40B00EB54C6 /* Observable.swift in Sources */,
 				04A15B182451924500EB54C6 /* OMConstants.swift in Sources */,
 				04A15B1C2451935200EB54C6 /* Webservice.swift in Sources */,
+				04A15B262451CB9E00EB54C6 /* OMTransactionSuccessViewController.swift in Sources */,
+				04A15B2C2451CEB700EB54C6 /* CharityTableViewCell.swift in Sources */,
 				04A15ADA2450758100EB54C6 /* AppDelegate.swift in Sources */,
 				04A15ADC2450758100EB54C6 /* SceneDelegate.swift in Sources */,
+				04A15B282451CB9E00EB54C6 /* OMCharityListViewController.swift in Sources */,
 				04A15B1424518EB800EB54C6 /* OMBaseViewController.swift in Sources */,
+				04A15B3B2451E5C100EB54C6 /* Charity.swift in Sources */,
+				04A15B322451E48C00EB54C6 /* RowViewModel.swift in Sources */,
+				04A15B392451E58F00EB54C6 /* CharityListController.swift in Sources */,
+				04A15B272451CB9E00EB54C6 /* OMCharityDonationViewController.swift in Sources */,
 				04A15B1A2451925600EB54C6 /* OMErrors.swift in Sources */,
 				04A15B202451937900EB54C6 /* API.swift in Sources */,
 				04A15B222451944F00EB54C6 /* OMParser.swift in Sources */,
