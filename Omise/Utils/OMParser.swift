@@ -30,5 +30,21 @@ class OMParser{
             return nil
         }
     }
+    
+    static func parseCharities(data: Data) -> [Charity]?{
+         do{
+             let charitiesModel = try JSONDecoder().decode(CharityListModel.self, from: data)
+            return charitiesModel.data
+         }catch{
+             print(error)
+             return nil
+         }
+     }
+    
+    static func donationParams(donationModel: DonationViewModel) -> JSONdictionary{
+        return ["charityName" : donationModel.charityName,
+                "amount": donationModel.amount,
+                "token": donationModel.token]
+    }
 }
 

@@ -34,6 +34,9 @@
 		04A15B3B2451E5C100EB54C6 /* Charity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B3A2451E5C100EB54C6 /* Charity.swift */; };
 		04A15B3E2451F9EE00EB54C6 /* OmiseSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A15B3D2451F9ED00EB54C6 /* OmiseSDK.framework */; };
 		04A15B3F2451F9EE00EB54C6 /* OmiseSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A15B3D2451F9ED00EB54C6 /* OmiseSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A15B422451FBFF00EB54C6 /* OMDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B412451FBFF00EB54C6 /* OMDataManager.swift */; };
+		04A15B452451FC5C00EB54C6 /* DonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B442451FC5C00EB54C6 /* DonationViewModel.swift */; };
+		04A15B47245204C900EB54C6 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B46245204C900EB54C6 /* CustomViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		04A15B382451E58F00EB54C6 /* CharityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListController.swift; sourceTree = "<group>"; };
 		04A15B3A2451E5C100EB54C6 /* Charity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Charity.swift; sourceTree = "<group>"; };
 		04A15B3D2451F9ED00EB54C6 /* OmiseSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OmiseSDK.framework; path = Carthage/Build/iOS/OmiseSDK.framework; sourceTree = "<group>"; };
+		04A15B412451FBFF00EB54C6 /* OMDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMDataManager.swift; sourceTree = "<group>"; };
+		04A15B442451FC5C00EB54C6 /* DonationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
+		04A15B46245204C900EB54C6 /* CustomViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +222,7 @@
 		04A15B0C24507F4700EB54C6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B432451FC4300EB54C6 /* Donation */,
 				04A15B372451E56100EB54C6 /* Charities */,
 			);
 			path = ViewModels;
@@ -264,6 +271,7 @@
 				04A15B172451924500EB54C6 /* OMConstants.swift */,
 				04A15B192451925600EB54C6 /* OMErrors.swift */,
 				04A15B212451944F00EB54C6 /* OMParser.swift */,
+				04A15B412451FBFF00EB54C6 /* OMDataManager.swift */,
 				04A15B2D2451E40B00EB54C6 /* Observable.swift */,
 				04A15B332451E4C000EB54C6 /* BindingTextField.swift */,
 			);
@@ -289,6 +297,7 @@
 		04A15B2A2451CEA300EB54C6 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				04A15B46245204C900EB54C6 /* CustomViews.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -308,6 +317,14 @@
 				04A15B3D2451F9ED00EB54C6 /* OmiseSDK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04A15B432451FC4300EB54C6 /* Donation */ = {
+			isa = PBXGroup;
+			children = (
+				04A15B442451FC5C00EB54C6 /* DonationViewModel.swift */,
+			);
+			path = Donation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A15B1E2451936600EB54C6 /* WebServiceConstants.swift in Sources */,
+				04A15B47245204C900EB54C6 /* CustomViews.swift in Sources */,
 				04A15B342451E4C000EB54C6 /* BindingTextField.swift in Sources */,
 				04A15B302451E44500EB54C6 /* CharityListViewModel.swift in Sources */,
 				04A15B2E2451E40B00EB54C6 /* Observable.swift in Sources */,
@@ -451,12 +469,14 @@
 				04A15B262451CB9E00EB54C6 /* OMTransactionSuccessViewController.swift in Sources */,
 				04A15B2C2451CEB700EB54C6 /* CharityTableViewCell.swift in Sources */,
 				04A15ADA2450758100EB54C6 /* AppDelegate.swift in Sources */,
+				04A15B422451FBFF00EB54C6 /* OMDataManager.swift in Sources */,
 				04A15ADC2450758100EB54C6 /* SceneDelegate.swift in Sources */,
 				04A15B282451CB9E00EB54C6 /* OMCharityListViewController.swift in Sources */,
 				04A15B1424518EB800EB54C6 /* OMBaseViewController.swift in Sources */,
 				04A15B3B2451E5C100EB54C6 /* Charity.swift in Sources */,
 				04A15B322451E48C00EB54C6 /* RowViewModel.swift in Sources */,
 				04A15B392451E58F00EB54C6 /* CharityListController.swift in Sources */,
+				04A15B452451FC5C00EB54C6 /* DonationViewModel.swift in Sources */,
 				04A15B272451CB9E00EB54C6 /* OMCharityDonationViewController.swift in Sources */,
 				04A15B1A2451925600EB54C6 /* OMErrors.swift in Sources */,
 				04A15B202451937900EB54C6 /* API.swift in Sources */,

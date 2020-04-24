@@ -38,7 +38,7 @@ class OMCharityListViewController: OMBaseViewController {
             self?.hideLoader()
             self?.charityListTableView.reloadData()
         }
-        //TODO:-
+        controller.start()
     }
     
     ///Used to pass the selected charityname to the next donation screen

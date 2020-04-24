@@ -14,3 +14,10 @@ let kDefaultTimeOutInterval = 60
 enum AuthHeaders : String {
     case Content_Type = "Content-Type"
 }
+
+enum FieldValidationSatus : Equatable{
+    case valid
+    case invalid(validationMessage: String)
+}
+
+let ktestPublicKey = "pkey_test_5ivhwgv1rrj1la797si"
