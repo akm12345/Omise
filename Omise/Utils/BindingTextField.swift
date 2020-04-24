@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// This is used to implement data binding from textfield to its associated view model. whenever the value of textfield changes, the view model gets notified automatically.
 class BindingTextField : UITextField {
     
     var textChanged :(String) -> () = { _ in }

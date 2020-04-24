@@ -31,6 +31,9 @@ class OMParser{
         }
     }
     
+    /// This method is used to parse the data and return a list available charities
+    /// - Parameter data: Data
+    /// - Returns: an array of charities
     static func parseCharities(data: Data) -> [Charity]?{
          do{
              let charitiesModel = try JSONDecoder().decode(CharityListModel.self, from: data)
@@ -41,6 +44,9 @@ class OMParser{
          }
      }
     
+    //// This method is used to form params for a donation API
+    /// - Parameter donationModel: donation model containing related info
+    /// - Returns: a JSON formatted dictionary with key value pairs
     static func donationParams(donationModel: DonationViewModel) -> JSONdictionary{
         return ["charityName" : donationModel.charityName,
                 "amount": donationModel.amount,

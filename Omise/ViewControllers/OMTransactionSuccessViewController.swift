@@ -8,7 +8,7 @@
 
 import UIKit
 
-///This view controller class is used to show if  donation has been successfully
+///This view controller shows that the donation has been made successfully
 class OMTransactionSuccessViewController: UIViewController {
 
     //MARK:- View lifecycle methods

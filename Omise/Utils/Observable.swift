@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// This generic class is used to implement data binding and add observers as in MVVM. Any type conforming to this will gets notified whenever its value changes, with the use of closure.
 class Observable<T> {
     var value: T {
         didSet {
@@ -31,6 +32,7 @@ class Observable<T> {
          }
      }
 
+    /// remove observers
      func removeObserver() {
          valueChanged = nil
      }

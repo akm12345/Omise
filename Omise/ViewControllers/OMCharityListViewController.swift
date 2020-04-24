@@ -69,9 +69,6 @@ class OMCharityListViewController: OMBaseViewController {
 extension OMCharityListViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewModel = self.viewModels.value[indexPath.row]
-//        if let viewModel = viewModel as? ViewModelPressible{
-//            viewModel.cellPressed?()
-//        }
         if let charityListViewModel = viewModel as? CharityListViewModel{
             performSegue(withIdentifier: "OMCharityDonationViewController" , sender: charityListViewModel.charityName )
         }
