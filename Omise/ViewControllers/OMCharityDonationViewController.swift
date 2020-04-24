@@ -106,4 +106,9 @@ extension OMCharityDonationViewController: UITextFieldDelegate{
         }
         return true
     }
+       
+    //End editing when user taps outside of textfield
+       override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+           self.view.endEditing(true)
+       }
 }

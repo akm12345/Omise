@@ -12,7 +12,6 @@
 		04A15AE12450758100EB54C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A15ADF2450758100EB54C6 /* Main.storyboard */; };
 		04A15AE32450758300EB54C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A15AE22450758300EB54C6 /* Assets.xcassets */; };
 		04A15AE62450758300EB54C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A15AE42450758300EB54C6 /* LaunchScreen.storyboard */; };
-		04A15AF12450758400EB54C6 /* OmiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15AF02450758400EB54C6 /* OmiseTests.swift */; };
 		04A15AFC2450758400EB54C6 /* OmiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15AFB2450758400EB54C6 /* OmiseUITests.swift */; };
 		04A15B1424518EB800EB54C6 /* OMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1324518EB800EB54C6 /* OMBaseViewController.swift */; };
 		04A15B1624518F0E00EB54C6 /* OMLocalMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B1524518F0E00EB54C6 /* OMLocalMessages.swift */; };
@@ -37,6 +36,9 @@
 		04A15B422451FBFF00EB54C6 /* OMDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B412451FBFF00EB54C6 /* OMDataManager.swift */; };
 		04A15B452451FC5C00EB54C6 /* DonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B442451FC5C00EB54C6 /* DonationViewModel.swift */; };
 		04A15B47245204C900EB54C6 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B46245204C900EB54C6 /* CustomViews.swift */; };
+		04A15B4924530B2200EB54C6 /* CharityListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B4824530B2200EB54C6 /* CharityListViewModelTests.swift */; };
+		04A15B4B24530BB600EB54C6 /* DonationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B4A24530BB600EB54C6 /* DonationViewModelTests.swift */; };
+		04A15B4D24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15B4C24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +81,6 @@
 		04A15AE52450758300EB54C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A15AE72450758300EB54C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A15AEC2450758400EB54C6 /* OmiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04A15AF02450758400EB54C6 /* OmiseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmiseTests.swift; sourceTree = "<group>"; };
 		04A15AF22450758400EB54C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A15AF72450758400EB54C6 /* OmiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A15AFB2450758400EB54C6 /* OmiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmiseUITests.swift; sourceTree = "<group>"; };
@@ -106,6 +107,9 @@
 		04A15B412451FBFF00EB54C6 /* OMDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMDataManager.swift; sourceTree = "<group>"; };
 		04A15B442451FC5C00EB54C6 /* DonationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
 		04A15B46245204C900EB54C6 /* CustomViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		04A15B4824530B2200EB54C6 /* CharityListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListViewModelTests.swift; sourceTree = "<group>"; };
+		04A15B4A24530BB600EB54C6 /* DonationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewModelTests.swift; sourceTree = "<group>"; };
+		04A15B4C24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMCharityDonationViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +182,10 @@
 		04A15AEF2450758400EB54C6 /* OmiseTests */ = {
 			isa = PBXGroup;
 			children = (
-				04A15AF02450758400EB54C6 /* OmiseTests.swift */,
 				04A15AF22450758400EB54C6 /* Info.plist */,
+				04A15B4824530B2200EB54C6 /* CharityListViewModelTests.swift */,
+				04A15B4A24530BB600EB54C6 /* DonationViewModelTests.swift */,
+				04A15B4C24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift */,
 			);
 			path = OmiseTests;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 					};
 					04A15AEB2450758400EB54C6 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 						TestTargetID = 04A15AD52450758100EB54C6;
 					};
 					04A15AF62450758400EB54C6 = {
@@ -489,7 +496,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A15AF12450758400EB54C6 /* OmiseTests.swift in Sources */,
+				04A15B4B24530BB600EB54C6 /* DonationViewModelTests.swift in Sources */,
+				04A15B4D24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift in Sources */,
+				04A15B4924530B2200EB54C6 /* CharityListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +708,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5X96J98Z3;
 				INFOPLIST_FILE = OmiseTests/Info.plist;
@@ -710,6 +720,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mindfire.OmiseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Omise.app/Omise";
@@ -721,6 +732,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5X96J98Z3;
 				INFOPLIST_FILE = OmiseTests/Info.plist;
