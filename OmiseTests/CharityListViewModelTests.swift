@@ -7,15 +7,40 @@
 //
 
 import XCTest
+@testable import Omise
 
 class CharityListViewModelTests: XCTestCase {
+    
+    var chartyListViewModel: CharityListViewModel!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        chartyListViewModel = CharityListViewModel(imageUrl: "http://www.adamandlianne.com/uploads/2/2/1/6/2216267/3231127.gif", charityName: "Habitat for Humanity")
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+       chartyListViewModel = nil
     }
+    
+    func testCharityModelForCorrectValues(){
+        XCTAssertNotNil(chartyListViewModel.imageUrl)
+        XCTAssertNotNil(chartyListViewModel.charityName)
+        
+        XCTAssertEqual(chartyListViewModel.charityName, "Habitat for Humanity")
+        XCTAssertEqual(chartyListViewModel.imageUrl, "http://www.adamandlianne.com/uploads/2/2/1/6/2216267/3231127.gif")
+    }
+    
+    func testCharityModelForInCorrectValues(){
+        XCTAssertNotEqual(chartyListViewModel.charityName, "")
+        XCTAssertNotEqual(chartyListViewModel.charityName, "Habitat")
+        XCTAssertNotEqual(chartyListViewModel.imageUrl, "")
+        XCTAssertNotEqual(chartyListViewModel.imageUrl, "http://www.adamandlianne.com")
+    }
+    
 
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
 }

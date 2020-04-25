@@ -113,20 +113,20 @@
                                     <action selector="donateAmount:" destination="edg-rz-tO3" eventType="touchUpInside" id="YIX-O1-zCg"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UM1-bE-7yY">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UM1-bE-7yY">
                                 <rect key="frame" x="35" y="190.5" width="344" height="21.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Charity Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB9-Fe-21k">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="21.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="125" id="Lck-Pv-bdv"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="cQh-tq-7qi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="QJA-VL-HUK">
-                                        <rect key="frame" x="129" y="0.0" width="215" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJA-VL-HUK">
+                                        <rect key="frame" x="132" y="0.0" width="212" height="21.5"/>
                                         <accessibility key="accessibilityConfiguration" label="Label-DonationVC"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -190,7 +190,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C8t-Cc-EiQ">
                                 <rect key="frame" x="46.5" y="333" width="321.5" height="230.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-hc-xLa">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DonationSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-hc-xLa">
                                         <rect key="frame" x="70.5" y="0.0" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="0K2-gQ-rAJ"/>
@@ -205,10 +205,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH2-fZ-qqE" customClass="RoundButton" customModule="Omise" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH2-fZ-qqE" customClass="RoundButton" customModule="Omise" customModuleProvider="target">
                                 <rect key="frame" x="30" y="754" width="354" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.40213584899902344" green="0.73042494058609009" blue="0.74254363775253296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="yUU-bd-NKz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                 <state key="normal" title="Dismiss">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,6 +229,9 @@
                         <constraints>
                             <constraint firstItem="C8t-Cc-EiQ" firstAttribute="centerX" secondItem="ydl-Uv-99m" secondAttribute="centerX" id="03x-yc-n57"/>
                             <constraint firstItem="C8t-Cc-EiQ" firstAttribute="centerY" secondItem="ydl-Uv-99m" secondAttribute="centerY" id="MdV-r8-eFC"/>
+                            <constraint firstItem="gqe-W0-rxb" firstAttribute="bottom" secondItem="LH2-fZ-qqE" secondAttribute="bottom" constant="53" id="Wl1-EU-yL2"/>
+                            <constraint firstItem="gqe-W0-rxb" firstAttribute="trailing" secondItem="LH2-fZ-qqE" secondAttribute="trailing" constant="30" id="bMq-i8-BiA"/>
+                            <constraint firstItem="LH2-fZ-qqE" firstAttribute="leading" secondItem="gqe-W0-rxb" secondAttribute="leading" constant="30" id="cxc-NU-BJL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gqe-W0-rxb"/>
                     </view>
@@ -260,6 +265,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="success" width="512" height="512"/>
+        <image name="DonationSuccess" width="512" height="512"/>
     </resources>
 </document>

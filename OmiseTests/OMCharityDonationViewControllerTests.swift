@@ -7,15 +7,33 @@
 //
 
 import XCTest
+@testable import Omise
 
 class OMCharityDonationViewControllerTests: XCTestCase {
+    
+    var donationViewController: OMCharityDonationViewController!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        donationViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: String(describing: OMCharityDonationViewController.self)) as! OMCharityDonationViewController)
+        donationViewController.loadViewIfNeeded()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        donationViewController = nil
+    }
+    
+    func testOutletValues(){
+        donationViewController.charityName = "Habitat for humanity"
+        XCTAssertNotNil(donationViewController.charityName, "Charity name cannot be nil")
+        XCTAssertNotNil(donationViewController.donationViewModel, "Donation view model invalid")
+        XCTAssertNotNil(donationViewController.publicKey, "Test key cannot be nil")
+    }
+
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
     }
 
 }
