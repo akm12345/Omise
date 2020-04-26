@@ -11,6 +11,7 @@ import UIKit
 @IBDesignable class RoundView: UIView {}
 @IBDesignable class RoundButton: UIButton {}
 
+/// This sused to make rounded views and buttons
 extension UIView {
     @IBInspectable
     var cornerRadius: CGFloat {

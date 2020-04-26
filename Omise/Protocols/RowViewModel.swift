@@ -12,10 +12,6 @@ import Foundation
 
 protocol RowViewModel{}
 
-protocol ViewModelPressible{
-    var cellPressed: (() -> Void)? {get set}
-}
-
 protocol CellConfigurable: RowViewModel{
     func setUp(rowViewModel: RowViewModel)
 }

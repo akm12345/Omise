@@ -8,23 +8,21 @@
 
 import Foundation
 
+/// This class is responsible for managing viewmodels for charity view controller
 class CharityListController{
     
-    //let viewModel : CharityListViewModel
+    //MARK:- Instance variables
     var viewModels = Observable<[RowViewModel]>(value: [])
     var charityListManager = OMDataManager()
     
-//    init(viewModel: CharityListViewModel = CharityListViewModel()) {
-//        self.viewModel = viewModel
-//    }
-    
+    //MARK:- Initializer
     init(charityManager: OMDataManager = OMDataManager()) {
         self.charityListManager = charityManager
     }
     
-    //API call
+    //MARK:- Instance methods
+    /// This method starts buidilg viewmodels after fetching charities from webservice
     func start(){
-        //Webservice api call
         charityListManager.getCharitiesList { (charities, errorDescription) in
             if let error = errorDescription{
                 print(error)
@@ -34,24 +32,16 @@ class CharityListController{
                 self.buildViewModels(charities: charities)
             }
         }
-        //pass values and build view models
-        //buildViewModels()
     }
     
+    /// This method parses the charities to their corressponding viewmodel
     func buildViewModels(charities : [Charity]){
         //self.viewModel.value
         var viewModels = [RowViewModel]()
         for charity in charities{
             let charityListModel = CharityListViewModel(imageUrl: charity.logo_url, charityName: charity.name)
-            charityListModel.cellPressed = { [weak self] in
-                self?.handleCellPressed(charityListModel: charityListModel)
-            }
             viewModels.append(charityListModel)
         }
         self.viewModels.value = viewModels
-    }
-    
-    private func handleCellPressed(charityListModel: CharityListViewModel){
-        //handle cell press
     }
 }

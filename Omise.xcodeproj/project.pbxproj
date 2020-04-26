@@ -168,7 +168,6 @@
 				04A15B0C24507F4700EB54C6 /* ViewModels */,
 				04A15B0D24507F5100EB54C6 /* ViewControllers */,
 				04A15B0E24507F5C00EB54C6 /* Protocols */,
-				04A15B0F24507F6500EB54C6 /* Extensions */,
 				04A15B1024507F6E00EB54C6 /* Services */,
 				04A15B1124507F7500EB54C6 /* Utils */,
 				04A15B1224507F8700EB54C6 /* Storyboards */,
@@ -251,13 +250,6 @@
 				04A15B312451E48C00EB54C6 /* RowViewModel.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		04A15B0F24507F6500EB54C6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		04A15B1024507F6E00EB54C6 /* Services */ = {

@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Charity List  model, as per the charities API response format
 struct CharityListModel: Codable{
     var data : [Charity]
 }

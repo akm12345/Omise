@@ -9,12 +9,15 @@
 
 import Foundation
 
-class CharityListViewModel: RowViewModel, ViewModelPressible{
+/// This is the ViewModel class for CharityListViewController.
+class CharityListViewModel: RowViewModel{
+    
+    //MARK:- Instance variables
     var imageUrl: String
     var charityName: String
-    var cellPressed: (() -> Void)?
     var onErrorHandling : ((String) -> Void)?
     
+    //MARK:- Initializer
     init(imageUrl: String, charityName: String) {
         self.imageUrl = imageUrl
         self.charityName = charityName
