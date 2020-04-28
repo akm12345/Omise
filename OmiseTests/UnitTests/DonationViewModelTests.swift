@@ -25,6 +25,7 @@ class DonationViewModelTests: XCTestCase {
         donationViewModel = nil
     }
     
+    /// Test case for correct donation view model values
     func testDonationModelForCorrectValues(){
         XCTAssertNotNil(donationViewModel.amount, "Amount cannnot be nil")
         XCTAssertNotNil(donationViewModel.charityName, "Charity name cannot be nil")
@@ -35,6 +36,7 @@ class DonationViewModelTests: XCTestCase {
         XCTAssertEqual(donationViewModel.token, "pkey_test_5ivhwgv1rrj1la797si", "Wrong token")
     }
     
+    /// Test case for incorrect donation view model values
     func testDonationModelForInCorrectValues(){
         XCTAssertNotEqual(donationViewModel.amount, "", "Invalid amount")
         XCTAssertNotEqual(donationViewModel.charityName, "Charity name cannot be empty")
@@ -45,6 +47,7 @@ class DonationViewModelTests: XCTestCase {
         XCTAssertNotEqual(donationViewModel.token, "dgklgkl", "Incorrect token")
     }
     
+    /// Test case for donation amount
     func testDonationAmountIsValid(){
         XCTAssertNotNil(donationViewModel.validAmount)
         XCTAssertEqual(donationViewModel.validAmount, 200, "Computed amount value is incorrect")
@@ -56,12 +59,16 @@ class DonationViewModelTests: XCTestCase {
         XCTAssertNil(donationViewModel.validAmount, "Computed amount is not a valid integer")
     }
     
+    /// Test case for donation view model validations
     func testdonationViewModelValidations(){
         XCTAssertEqual(donationViewModel.validateEntries(), FieldValidationSatus.valid, "View Model validations failed")
         donationViewModel.amount = "NA"
         XCTAssertEqual(donationViewModel.validateEntries(), FieldValidationSatus.invalid(validationMessage: msgInvalidAmount), "View Model validations failed")
+        donationViewModel.amount = "0"
+        XCTAssertEqual(donationViewModel.validateEntries(), FieldValidationSatus.invalid(validationMessage: msgInvalidAmount), "View Model validations failed")
     }
     
+    /// Test case for incorrect charity name
     func testValidationMessageForIncorrectCharityName(){
         donationViewModel.charityName = nil
         let validationStatus = donationViewModel.validateEntries()
@@ -72,6 +79,7 @@ class DonationViewModelTests: XCTestCase {
         }
     }
     
+    /// Test case forincorrect token
     func testValidationMessageForIncorrectToken(){
         donationViewModel.token = nil
         let tokenValidationStatus = donationViewModel.validateEntries()
@@ -82,6 +90,7 @@ class DonationViewModelTests: XCTestCase {
         }
     }
     
+    /// Test case for incorrect  amount validation message message
     func testValidationMessageForIncorrectAmount(){
         donationViewModel.amount = nil
         let amountValidationStatus = donationViewModel.validateEntries()
@@ -92,6 +101,7 @@ class DonationViewModelTests: XCTestCase {
         }
     }
     
+    /// Test donation request to perofrom donation
     func testDonationWithExpectation(){
         let expect = expectation(description: "Donation should succeed")
         donationViewModel.donateAmount { (success, error) in
@@ -100,7 +110,7 @@ class DonationViewModelTests: XCTestCase {
             XCTAssertEqual(success, true, "Failed to donate amount")
             expect.fulfill()
         }
-        waitForExpectations(timeout: 10) { (error) in
+        waitForExpectations(timeout: 30) { (error) in
             XCTAssertNil(error, "Test timed Out")
         }
     }

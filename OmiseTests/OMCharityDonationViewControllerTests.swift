@@ -22,6 +22,7 @@ class OMCharityDonationViewControllerTests: XCTestCase {
         donationViewController = nil
     }
     
+    /// Test case view controller outlets
     func testOutletValues(){
         donationViewController.charityName = "Habitat for humanity"
         XCTAssertNotNil(donationViewController.charityName, "Charity name cannot be nil")
