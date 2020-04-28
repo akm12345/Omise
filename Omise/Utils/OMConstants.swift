@@ -10,6 +10,7 @@ import Foundation
 
 //MARK:- Global Constants to be used throughout the app
 let kDefaultTimeOutInterval = 60
+let kAllowedCharacterSetForDonationAnount = "0123456789."
 
 enum AuthHeaders : String {
     case Content_Type = "Content-Type"

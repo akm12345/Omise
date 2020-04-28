@@ -29,9 +29,16 @@ class OMCharityDonationViewController: OMBaseViewController {
     }
     
     //MARK:- IBAction methods
-      @IBAction func donateAmount(_ sender: Any) {
-          displayCreditCardForm()
-      }
+    @IBAction func donateAmount(_ sender: Any) {
+        self.view.endEditing(true)
+        let validationStatus = donationViewModel.validateEntries()
+        switch validationStatus {
+        case .valid:
+            displayCreditCardForm()
+        case .invalid(let validationErrorMessage):
+            showAlert(message: validationErrorMessage)
+        }
+    }
     
     //MARK:- Instance methods
     
@@ -60,7 +67,7 @@ class OMCharityDonationViewController: OMBaseViewController {
                 self.showAlert(message: errorMessage)
             }
             if success != nil{
-                self.performSegue(withIdentifier: "OMTransactionSuccessViewController", sender: nil)
+                self.performSegue(withIdentifier: String(describing: OMTransactionSuccessViewController.self), sender: nil)
             }
         })
     }
@@ -98,7 +105,7 @@ extension OMCharityDonationViewController: UITextFieldDelegate{
     ///Accept only decimal digits for donation textfield
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == donationAmountTextField{
-            let allowedCharacters = CharacterSet(charactersIn: "0123456789.")
+            let allowedCharacters = CharacterSet(charactersIn: kAllowedCharacterSetForDonationAnount)
             let characterSet = CharacterSet(charactersIn: string)
             if (!allowedCharacters.isSuperset(of: characterSet)){
                 return false
@@ -106,9 +113,9 @@ extension OMCharityDonationViewController: UITextFieldDelegate{
         }
         return true
     }
-       
+    
     //End editing when user taps outside of textfield
-       override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           self.view.endEditing(true)
-       }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

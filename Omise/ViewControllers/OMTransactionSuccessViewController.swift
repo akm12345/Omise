@@ -10,7 +10,7 @@ import UIKit
 
 ///This view controller shows that the donation has been made successfully
 class OMTransactionSuccessViewController: UIViewController {
-
+    
     //MARK:- View lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()

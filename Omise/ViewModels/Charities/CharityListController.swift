@@ -25,7 +25,6 @@ class CharityListController{
     func start(){
         charityListManager.getCharitiesList { (charities, errorDescription) in
             if let error = errorDescription{
-                print(error)
                 self.viewModels.onErrorHandling?(error)
             }
             if let charities = charities{

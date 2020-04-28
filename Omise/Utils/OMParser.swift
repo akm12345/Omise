@@ -26,7 +26,6 @@ class OMParser{
             let response = try JSONDecoder().decode(OmResponseModel.self, from: data)
             return response.success ? nil : response.error_message
         }catch{
-            print("Parsing error:- \(error)")
             return nil
         }
     }
@@ -35,14 +34,13 @@ class OMParser{
     /// - Parameter data: Data
     /// - Returns: an array of charities
     static func parseCharities(data: Data) -> [Charity]?{
-         do{
-             let charitiesModel = try JSONDecoder().decode(CharityListModel.self, from: data)
+        do{
+            let charitiesModel = try JSONDecoder().decode(CharityListModel.self, from: data)
             return charitiesModel.data
-         }catch{
-             print(error)
-             return nil
-         }
-     }
+        }catch{
+            return nil
+        }
+    }
     
     //// This method is used to form params for a donation API
     /// - Parameter donationModel: donation model containing related info

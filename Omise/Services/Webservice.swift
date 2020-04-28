@@ -37,7 +37,6 @@ class Webservice{
             return
         }
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: TimeInterval(kDefaultTimeOutInterval))
-        print("GET REQUEST URL:- \(url)")
         
         request.allHTTPHeaderFields = headers(requestType: serviceConstants.GET)
         
@@ -59,8 +58,6 @@ class Webservice{
             completion(nil, msgInvalidURL)
             return
         }
-        
-        print("Post Request:-\(body)")
         
         guard let bodyData = data(for: bodyType, body: body) else {
             completion(nil, msgInvalidParameter)
@@ -91,12 +88,9 @@ class Webservice{
         case .formData:
             do{
                 let jsonData = try JSONSerialization.data(withJSONObject: body, options: [])
-                let resquestJson = String(data: jsonData, encoding: .utf8)
-                print("API Request:-\(resquestJson ?? "")")
                 return jsonData
             }
             catch{
-                print(error)
                 return nil
             }
         case .urlEncoded:
@@ -116,13 +110,12 @@ class Webservice{
         let authheader = [
             AuthHeaders.Content_Type.rawValue : serviceConstants.DEFAULT_ACCEPT_HEADER,
         ]
-        print("AuthHeader: \(authheader) ")
         return authheader
     }
     
-     /// This performs a URLRequest with default session configuration
-     /// - Parameter request: URLRequest
-     /// - Parameter completion: Completion handler that returns either a valid data or an error message
+    /// This performs a URLRequest with default session configuration
+    /// - Parameter request: URLRequest
+    /// - Parameter completion: Completion handler that returns either a valid data or an error message
     private static func performRequest(request: URLRequest, completion : @escaping  networkResponse ){
         
         let defaultSession = URLSession(configuration: .default)

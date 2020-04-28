@@ -52,7 +52,6 @@ class DonationViewModel{
     func validateEntries() -> FieldValidationSatus{
         guard charityName != nil else {return FieldValidationSatus.invalid(validationMessage: msgInvalidCharityName)}
         guard let validIntegerAmount = validAmount, validIntegerAmount > 0 else {return FieldValidationSatus.invalid(validationMessage: msgInvalidAmount)}
-        guard token != nil else {return FieldValidationSatus.invalid(validationMessage: msgInvalidToken)}
         return FieldValidationSatus.valid
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0476399C24584B8100569115 /* OMExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476399B24584B8100569115 /* OMExtensions.swift */; };
 		04A15ADA2450758100EB54C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15AD92450758100EB54C6 /* AppDelegate.swift */; };
 		04A15ADC2450758100EB54C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15ADB2450758100EB54C6 /* SceneDelegate.swift */; };
 		04A15AE12450758100EB54C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A15ADF2450758100EB54C6 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0476399B24584B8100569115 /* OMExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMExtensions.swift; sourceTree = "<group>"; };
 		04A15AD62450758100EB54C6 /* Omise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A15AD92450758100EB54C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A15ADB2450758100EB54C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 		04A15B442451FC5C00EB54C6 /* DonationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
 		04A15B46245204C900EB54C6 /* CustomViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		04A15B4824530B2200EB54C6 /* CharityListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityListViewModelTests.swift; sourceTree = "<group>"; };
-		04A15B4A24530BB600EB54C6 /* DonationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewModelTests.swift; sourceTree = "<group>"; };
+		04A15B4A24530BB600EB54C6 /* DonationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DonationViewModelTests.swift; path = UnitTests/DonationViewModelTests.swift; sourceTree = "<group>"; };
 		04A15B4C24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMCharityDonationViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0476399A24584B6900569115 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0476399B24584B8100569115 /* OMExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		04A15ACD2450758100EB54C6 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 				04A15B0D24507F5100EB54C6 /* ViewControllers */,
 				04A15B0E24507F5C00EB54C6 /* Protocols */,
 				04A15B1024507F6E00EB54C6 /* Services */,
+				0476399A24584B6900569115 /* Extensions */,
 				04A15B1124507F7500EB54C6 /* Utils */,
 				04A15B1224507F8700EB54C6 /* Storyboards */,
 				04A15AE22450758300EB54C6 /* Assets.xcassets */,
@@ -181,10 +192,10 @@
 		04A15AEF2450758400EB54C6 /* OmiseTests */ = {
 			isa = PBXGroup;
 			children = (
-				04A15AF22450758400EB54C6 /* Info.plist */,
 				04A15B4824530B2200EB54C6 /* CharityListViewModelTests.swift */,
 				04A15B4A24530BB600EB54C6 /* DonationViewModelTests.swift */,
 				04A15B4C24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift */,
+				04A15AF22450758400EB54C6 /* Info.plist */,
 			);
 			path = OmiseTests;
 			sourceTree = "<group>";
@@ -467,6 +478,7 @@
 				04A15B1C2451935200EB54C6 /* Webservice.swift in Sources */,
 				04A15B262451CB9E00EB54C6 /* OMTransactionSuccessViewController.swift in Sources */,
 				04A15B2C2451CEB700EB54C6 /* CharityTableViewCell.swift in Sources */,
+				0476399C24584B8100569115 /* OMExtensions.swift in Sources */,
 				04A15ADA2450758100EB54C6 /* AppDelegate.swift in Sources */,
 				04A15B422451FBFF00EB54C6 /* OMDataManager.swift in Sources */,
 				04A15ADC2450758100EB54C6 /* SceneDelegate.swift in Sources */,

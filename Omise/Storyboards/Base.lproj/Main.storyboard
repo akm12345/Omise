@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kW8-lG-a7j">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CharityTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kW8-lG-a7j">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -28,6 +28,9 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlE-p4-MLZ">
                                                     <rect key="frame" x="10" y="10" width="120" height="100"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="CharityTableCellImage">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="Iez-C4-ScQ"/>
                                                         <constraint firstAttribute="width" constant="120" id="aH2-Yd-wIT"/>
@@ -35,6 +38,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gHX-h1-ch9">
                                                     <rect key="frame" x="140" y="47.5" width="232.5" height="25.5"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="CharityTableCellLabel"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,6 +53,9 @@
                                                 <constraint firstItem="NlE-p4-MLZ" firstAttribute="centerY" secondItem="gHX-h1-ch9" secondAttribute="centerY" id="z6L-7h-EpO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="CharityTableCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="charityNameLabel" destination="gHX-h1-ch9" id="ybJ-OH-nwb"/>
                                             <outlet property="logoImageView" destination="NlE-p4-MLZ" id="6um-ag-p6z"/>
@@ -97,6 +104,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNN-bg-Azw" customClass="RoundButton" customModule="Omise" customModuleProvider="target">
                                 <rect key="frame" x="35" y="332" width="344" height="55"/>
                                 <color key="backgroundColor" red="0.40350425239999999" green="0.75053113699999996" blue="0.72172248360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DonateButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="n2g-wc-qD8"/>
                                 </constraints>
@@ -127,7 +135,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJA-VL-HUK">
                                         <rect key="frame" x="132" y="0.0" width="212" height="21.5"/>
-                                        <accessibility key="accessibilityConfiguration" label="Label-DonationVC"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="CharityNameLabel"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -145,6 +153,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Gk-gr-diR" customClass="BindingTextField" customModule="Omise" customModuleProvider="target">
                                         <rect key="frame" x="44.5" y="0.0" width="299.5" height="60"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DonationTextField"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
@@ -208,6 +217,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH2-fZ-qqE" customClass="RoundButton" customModule="Omise" customModuleProvider="target">
                                 <rect key="frame" x="30" y="754" width="354" height="55"/>
                                 <color key="backgroundColor" red="0.40213584899902344" green="0.73042494058609009" blue="0.74254363775253296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DismissButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="yUU-bd-NKz"/>
                                 </constraints>

@@ -12,13 +12,13 @@ import XCTest
 class CharityListViewModelTests: XCTestCase {
     
     var chartyListViewModel: CharityListViewModel!
-
+    
     override func setUp() {
         chartyListViewModel = CharityListViewModel(imageUrl: "http://www.adamandlianne.com/uploads/2/2/1/6/2216267/3231127.gif", charityName: "Habitat for Humanity")
     }
-
+    
     override func tearDown() {
-       chartyListViewModel = nil
+        chartyListViewModel = nil
     }
     
     func testCharityModelForCorrectValues(){
@@ -36,7 +36,6 @@ class CharityListViewModelTests: XCTestCase {
         XCTAssertNotEqual(chartyListViewModel.imageUrl, "http://www.adamandlianne.com")
     }
     
-
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
