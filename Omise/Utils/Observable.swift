@@ -25,15 +25,15 @@ class Observable<T> {
     }
     
     /// Add closure as an observer and trigger the closure imeediately if fireNow = true
-     func addObserver(fireNow: Bool = true, _ onChange: ((T) -> Void)?) {
-         valueChanged = onChange
-         if fireNow {
-             onChange?(value)
-         }
-     }
-
+    func addObserver(fireNow: Bool = true, _ onChange: ((T) -> Void)?) {
+        valueChanged = onChange
+        if fireNow {
+            onChange?(value)
+        }
+    }
+    
     /// remove observers
-     func removeObserver() {
-         valueChanged = nil
-     }
+    func removeObserver() {
+        valueChanged = nil
+    }
 }

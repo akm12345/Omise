@@ -78,23 +78,6 @@ class OMBaseViewController: UIViewController {
         return alert
     }
     
-    //MARK:- Toast
-    func showToast(message: String, completion: (()->Void)?) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        
-        DispatchQueue.main.async {
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            alert.dismiss(animated: true, completion: {
-                if let completion = completion {
-                    completion()
-                }
-            })
-        }
-    }
-    
     //MARK:- Loaders
     func showLoader(timeOut: TimeInterval = Double(kDefaultTimeOutInterval))
     {
