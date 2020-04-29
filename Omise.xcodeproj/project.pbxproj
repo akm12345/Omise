@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0476399C24584B8100569115 /* OMExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476399B24584B8100569115 /* OMExtensions.swift */; };
+		0476399E24598E3C00569115 /* OmErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476399D24598E3C00569115 /* OmErrorsTests.swift */; };
 		04A15ADA2450758100EB54C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15AD92450758100EB54C6 /* AppDelegate.swift */; };
 		04A15ADC2450758100EB54C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A15ADB2450758100EB54C6 /* SceneDelegate.swift */; };
 		04A15AE12450758100EB54C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A15ADF2450758100EB54C6 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		0476399B24584B8100569115 /* OMExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMExtensions.swift; sourceTree = "<group>"; };
+		0476399D24598E3C00569115 /* OmErrorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmErrorsTests.swift; sourceTree = "<group>"; };
 		04A15AD62450758100EB54C6 /* Omise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A15AD92450758100EB54C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A15ADB2450758100EB54C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				04A15B4824530B2200EB54C6 /* CharityListViewModelTests.swift */,
 				04A15B4A24530BB600EB54C6 /* DonationViewModelTests.swift */,
 				04A15B4C24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift */,
+				0476399D24598E3C00569115 /* OmErrorsTests.swift */,
 				04A15AF22450758400EB54C6 /* Info.plist */,
 			);
 			path = OmiseTests;
@@ -502,6 +505,7 @@
 			files = (
 				04A15B4B24530BB600EB54C6 /* DonationViewModelTests.swift in Sources */,
 				04A15B4D24530BD200EB54C6 /* OMCharityDonationViewControllerTests.swift in Sources */,
+				0476399E24598E3C00569115 /* OmErrorsTests.swift in Sources */,
 				04A15B4924530B2200EB54C6 /* CharityListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
